@@ -1,389 +1,837 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e12">
+    <title>Madhankumar Onteddubandi | Founder & Lead Architect (MadhanBlastz)</title>
+    <meta name="description"
+        content="Official developer page of Madhankumar Onteddubandi (MadhanBlastz), Founder and Lead Software Architect at NextGen Labs.">
+    <meta name="keywords"
+        content="Madhankumar Onteddubandi, MadhanBlastz, madhanblast, Madhan Blast, NextGen Labs, developer, software architect, Android developer, systems engineer, OneFiles">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Madhankumar Onteddubandi | Founder & Lead Architect (MadhanBlastz)">
+    <meta property="og:description"
+        content="Professional profile of Madhankumar Onteddubandi (MadhanBlastz), specialising in Android systems architecture, consolidated micro-utilities, and modular framework design.">
+    <meta property="og:image" content="feature_graphic_bg_1780857096668.png">
 
-<title>Madhankumar Onteddubandi | Developer</title>
+    <link rel="icon" type="image/png" href="NextGen Labs icon.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Madhankumar Onteddubandi",
+      "alternateName": ["MadhanBlastz", "madhanblast", "Madhan Blast", "Madhan Blastz"],
+      "jobTitle": "Founder & Lead Architect",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "NextGen Labs",
+        "url": "https://nextgenlabs-official.github.io/NextGen-Labs-Official/"
+      },
+      "url": "https://nextgenlabs-official.github.io/Developer/",
+      "knowsAbout": ["Android Development", "Software Architecture", "Mobile Utilities", "P2P Protocols", "Game Development"],
+      "sameAs": [
+        "https://github.com/madhankumar-onteddubandi"
+      ]
+    }
+    </script>
 
-<style>
+    <style>
+        :root {
+            --bg: #0a0e12;
+            --surface: #10151b;
+            --surface-2: #151b23;
+            --ink: #eceff3;
+            --ink-dim: #8993a3;
+            --ink-faint: #566072;
+            --amber: #f2a93b;
+            --amber-dim: #b98130;
+            --teal: #5eead4;
+            --border: rgba(94, 234, 212, 0.15);
+            --border-soft: rgba(255, 255, 255, 0.07);
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Inter,sans-serif;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-body{
-background:#050505;
-color:white;
-overflow-x:hidden;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* Galaxy canvas */
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-image:
+                radial-gradient(ellipse 800px 600px at 85% 15%, rgba(242, 169, 59, 0.07), transparent 60%),
+                radial-gradient(ellipse 900px 700px at 15% 85%, rgba(94, 234, 212, 0.07), transparent 60%);
+            background-attachment: fixed;
+        }
 
-#bg{
-position:fixed;
-top:0;
-left:0;
-z-index:-1;
-}
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.01em;
+        }
 
-/* Navbar */
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
 
-nav{
-position:fixed;
-width:100%;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(20px);
-z-index:10;
-}
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
 
-nav a{
-margin-left:20px;
-color:white;
-text-decoration:none;
-}
+        /* ---------- Top Navbar ---------- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: rgba(10, 14, 18, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-soft);
+        }
 
-/* Hero */
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-}
+        .nav-logo img {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+        }
 
-.hero h1{
-font-size:clamp(38px,8vw,70px);
-font-weight:800;
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
 
-background:linear-gradient(90deg,#00d4ff,#7c3aed);
--webkit-background-clip:text;
-color:transparent;
-}
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--ink-dim);
+        }
 
-.hero p{
-margin-top:10px;
-font-size:clamp(16px,3vw,22px);
-opacity:0.8;
-}
+        .nav-link:hover {
+            color: var(--teal);
+        }
 
-/* Sections */
+        /* ---------- Hero Grid (2-Column) ---------- */
+        header {
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            padding: 5rem 1.5rem 3rem;
+        }
 
-section{
-padding:120px 8%;
-max-width:1100px;
-margin:auto;
-}
+        .hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
 
-.title{
-font-size:32px;
-margin-bottom:30px;
-}
+        @media (min-width: 900px) {
+            .hero-inner {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 4rem;
+            }
 
-/* Glass cards */
+            .hero-text-block {
+                flex: 1.2;
+                max-width: 650px;
+                text-align: left;
+            }
 
-.card{
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(18px);
-padding:30px;
-border-radius:20px;
-margin-top:20px;
+            .hero-terminal {
+                flex: 0.8;
+                max-width: 460px;
+            }
+        }
 
-opacity:0;
-transform:translateY(80px);
-transition:1s;
-}
+        .eyebrow-path {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--teal);
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            margin-bottom: 1.2rem;
+        }
 
-.card.show{
-opacity:1;
-transform:translateY(0);
-}
+        .cursor {
+            display: inline-block;
+            width: 7px;
+            height: 1em;
+            background: var(--teal);
+            margin-left: 4px;
+            animation: blink 1s step-end infinite;
+            transform: translateY(2px);
+        }
 
-/* Skills */
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
 
-.skill{
-margin-bottom:25px;
-}
+        h1.name {
+            font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.08;
+            color: var(--ink);
+        }
 
-.bar{
-height:10px;
-background:#222;
-border-radius:10px;
-overflow:hidden;
-}
+        h1.name span {
+            color: var(--amber);
+        }
 
-.progress{
-height:10px;
-width:0;
-background:linear-gradient(90deg,#00d4ff,#7c3aed);
-transition:2s;
-}
+        .role-line {
+            margin-top: 1rem;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            color: var(--ink-dim);
+            line-height: 1.5;
+        }
 
-/* Footer */
+        .role-line strong {
+            color: var(--amber);
+        }
 
-footer{
-text-align:center;
-padding:40px;
-opacity:0.6;
-}
+        .bio-desc {
+            margin-top: 1.2rem;
+            font-size: 0.96rem;
+            color: var(--ink-faint);
+            line-height: 1.6;
+        }
 
-/* Mobile improvements */
+        /* Hero Actions Buttons */
+        .hero-actions {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
 
-@media(max-width:700px){
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #10151b 0%, #151b23 100%);
+            border: 1px solid var(--border-soft);
+            padding: 0.6rem 1.2rem;
+            border-radius: 12px;
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            text-align: left;
+        }
 
-nav{
-padding:15px 5%;
-}
+        .action-btn:hover {
+            background: linear-gradient(135deg, #151b23 0%, #1c2430 100%);
+            border-color: var(--teal);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(94, 234, 212, 0.15);
+        }
 
-section{
-padding:90px 6%;
-}
+        .action-btn.secondary {
+            background: transparent;
+            border-color: var(--border-soft);
+            color: var(--ink-dim);
+        }
 
-}
+        .action-btn.secondary:hover {
+            border-color: var(--amber);
+            color: var(--ink);
+            background: rgba(242, 169, 59, 0.03);
+            box-shadow: 0 8px 30px rgba(242, 169, 59, 0.12);
+        }
 
-</style>
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.25;
+        }
+
+        .btn-sub {
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--ink-faint);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-main {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        /* ---------- Code Terminal Block ---------- */
+        .terminal-wrapper {
+            background: rgba(16, 21, 27, 0.75);
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+        }
+
+        .terminal-header {
+            background: rgba(10, 14, 18, 0.5);
+            padding: 0.6rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-red {
+            background: #ff5f56;
+        }
+
+        .dot-yellow {
+            background: #ffbd2e;
+        }
+
+        .dot-green {
+            background: #27c93f;
+        }
+
+        .terminal-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--ink-faint);
+            margin-left: 0.5rem;
+        }
+
+        .terminal-body {
+            padding: 1.2rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--teal);
+            line-height: 1.4;
+            overflow-x: auto;
+            text-align: left;
+        }
+
+        .t-keyword {
+            color: #f2a93b;
+        }
+
+        .t-string {
+            color: #eceff3;
+        }
+
+        .t-comment {
+            color: #566072;
+        }
+
+        /* ---------- Core Expertise ---------- */
+        .section-container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 5rem 1.5rem;
+        }
+
+        .section-header {
+            margin-bottom: 3.5rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .section-sub {
+            color: var(--ink-dim);
+            font-size: 0.95rem;
+            margin-top: 0.4rem;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .exp-card {
+            background: rgba(16, 21, 27, 0.6);
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 1.8rem;
+            transition: all 0.25s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .exp-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--teal);
+            box-shadow: 0 10px 25px rgba(94, 234, 212, 0.05);
+        }
+
+        .exp-icon {
+            color: var(--teal);
+            margin-bottom: 1.2rem;
+        }
+
+        .exp-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.6rem;
+        }
+
+        .exp-desc {
+            font-size: 0.88rem;
+            color: var(--ink-dim);
+            line-height: 1.5;
+        }
+
+        /* ---------- Apps Showcase Grid ---------- */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .port-card {
+            background: rgba(16, 21, 27, 0.6);
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
+        }
+
+        .port-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--amber);
+            box-shadow: 0 15px 30px rgba(242, 169, 59, 0.06);
+        }
+
+        .port-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: var(--surface-2);
+            border: 1px solid var(--border-soft);
+            padding: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .port-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.4rem;
+        }
+
+        .port-desc {
+            font-size: 0.86rem;
+            color: var(--ink-dim);
+            line-height: 1.5;
+            min-height: 3.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .port-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: var(--surface-2);
+            border: 1px solid var(--border-soft);
+            color: var(--ink);
+            transition: all 0.2s ease;
+        }
+
+        .port-btn:hover {
+            border-color: var(--amber);
+            background: rgba(242, 169, 59, 0.05);
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            border-top: 1px solid var(--border-soft);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--ink-faint);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: var(--ink-dim);
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: var(--teal);
+        }
+    </style>
 </head>
 
 <body>
 
-<canvas id="bg"></canvas>
-
-<nav>
-
-<h3>NextGenLabs</h3>
-
-<div>
-<a href="#">Home</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
-
-</nav>
-
-<section class="hero">
-
-<h1>Madhankumar Onteddubandi</h1>
-<p>Game Developer • App Developer</p>
-
-</section>
-
-<section id="skills">
-
-<h2 class="title">Skills</h2>
-
-<div class="card">
-
-<div class="skill">
-<p>Game Development</p>
-<div class="bar"><div class="progress" data-width="90%"></div></div>
-</div>
-
-<div class="skill">
-<p>App Development</p>
-<div class="bar"><div class="progress" data-width="85%"></div></div>
-</div>
-
-<div class="skill">
-<p>Software Engineering</p>
-<div class="bar"><div class="progress" data-width="80%"></div></div>
-</div>
-
-<div class="skill">
-<p>Debugging</p>
-<div class="bar"><div class="progress" data-width="75%"></div></div>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2 class="title">Contact</h2>
-
-<div class="card">
-
-<p>Email:</p>
-<br>
-
-<a href="mailto:official.nextgenlabs@gmail.com">
-official.nextgenlabs@gmail.com
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Madhankumar Onteddubandi
-
-</footer>
-
-<script>
-
-/* ===== GALAXY BACKGROUND ===== */
-
-const canvas=document.getElementById("bg")
-
-const scene=new THREE.Scene()
-
-const camera=new THREE.PerspectiveCamera(
-75,
-window.innerWidth/window.innerHeight,
-0.1,
-1000
-)
-
-const renderer=new THREE.WebGLRenderer({
-canvas:canvas,
-alpha:true
-})
-
-renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
-renderer.setSize(window.innerWidth,window.innerHeight)
-
-camera.position.z=5
-
-/* Create stars */
-
-const starGeometry=new THREE.BufferGeometry()
-
-const starCount=3000
-const positions=new Float32Array(starCount*3)
-
-for(let i=0;i<starCount*3;i++){
-
-positions[i]=(Math.random()-0.5)*100
-
-}
-
-starGeometry.setAttribute(
-"position",
-new THREE.BufferAttribute(positions,3)
-)
-
-const starMaterial=new THREE.PointsMaterial({
-size:0.03,
-color:0xffffff
-})
-
-const stars=new THREE.Points(starGeometry,starMaterial)
-
-scene.add(stars)
-
-/* Animate galaxy */
-
-function animate(){
-
-requestAnimationFrame(animate)
-
-stars.rotation.y+=0.0005
-stars.rotation.x+=0.0002
-
-renderer.render(scene,camera)
-
-}
-
-animate()
-
-/* Interaction */
-
-let mouseX=0
-let mouseY=0
-
-document.addEventListener("mousemove",(event)=>{
-
-mouseX=event.clientX/window.innerWidth-0.5
-mouseY=event.clientY/window.innerHeight-0.5
-
-})
-
-document.addEventListener("touchmove",(event)=>{
-
-mouseX=event.touches[0].clientX/window.innerWidth-0.5
-mouseY=event.touches[0].clientY/window.innerHeight-0.5
-
-})
-
-function updateCamera(){
-
-camera.position.x+=(mouseX*2-camera.position.x)*0.02
-camera.position.y+=(-mouseY*2-camera.position.y)*0.02
-
-requestAnimationFrame(updateCamera)
-
-}
-
-updateCamera()
-
-/* Resize fix */
-
-window.addEventListener("resize",()=>{
-
-camera.aspect=window.innerWidth/window.innerHeight
-camera.updateProjectionMatrix()
-
-renderer.setSize(window.innerWidth,window.innerHeight)
-
-})
-
-/* Scroll animations */
-
-const cards=document.querySelectorAll(".card")
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show")
-
-}
-
-})
-
-})
-
-cards.forEach(card=>observer.observe(card))
-
-/* Skills animation */
-
-const skills=document.querySelectorAll(".progress")
-
-const skillObserver=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.width=entry.target.dataset.width
-
-}
-
-})
-
-})
-
-skills.forEach(skill=>skillObserver.observe(skill))
-
-</script>
+    <!-- Header Navbar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="NextGen Labs icon.png" alt="NextGen Labs Logo">
+            NextGen Labs
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="hero-inner">
+            <div class="hero-text-block">
+                <div class="eyebrow-path">
+                    ~/nextgen-labs/developer<span class="cursor"></span>
+                </div>
+                <h1 class="name">Madhankumar Onteddubandi</h1>
+                <p class="role-line">
+                    Founder & Lead Architect at <strong>NextGen Labs</strong>. Engineering under the alias
+                    <strong>@MadhanBlastz</strong>.
+                </p>
+                <p class="bio-desc">
+                    Specializing in system architecture design, cyber security protocols, performance optimization,
+                    Engineering in high-performance apps &amp; games development, local LLM integrations, custom prompt
+                    engineering,
+                    and AI product engineering.
+                </p>
+                <div class="hero-actions">
+                    <!-- NextGen Labs redirect -->
+                    <a href="https://nextgenlabs-official.github.io/NextGen-Labs-Official/" target="_blank"
+                        rel="noopener" class="action-btn">
+
+                        <div class="btn-text">
+                            <span class="btn-sub">Visit site</span>
+                            <span class="btn-main">NextGen Labs</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Terminal Mock Console -->
+            <div class="hero-terminal">
+                <div class="terminal-wrapper">
+                    <div class="terminal-header">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="terminal-title">bash - profile.js</span>
+                    </div>
+                    <pre class="terminal-body"><code><span class="t-keyword">const</span> developer = {
+  name: <span class="t-string">"Madhankumar Onteddubandi"</span>,
+  aliases: [<span class="t-string">"MadhanBlastz"</span>, <span class="t-string">"madhanblast"</span>],
+  role: <span class="t-string">"Lead Architect & Founder"</span>,
+  brand: <span class="t-string">"NextGen Labs"</span>,
+  stack: [
+    <span class="t-string">"Apps &amp; Games Development"</span>,
+    <span class="t-string">"System Architecture Design"</span>,
+    <span class="t-string">"Performance Optimization"</span>,
+    <span class="t-string">"Cyber Security"</span>,
+    <span class="t-string">"Prompt Engineering"</span>,
+    <span class="t-string">"LLM"</span>,
+    <span class="t-string">"AI Product Engineering"</span>
+  ],
+  mission: <span class="t-string">"Pack performance into clean code."</span>
+};
+
+<span class="t-comment">// Compilation Status: SUCCESS</span>
+console.log(<span class="t-string">"Developer Profile Loaded."</span>);</code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Expertise Section -->
+    <section id="expertise" class="section-container" style="border-top: 1px solid var(--border-soft);">
+        <div class="section-header">
+            <h2 class="section-title">Technical Expertise</h2>
+            <p class="section-sub">Primary areas of engineering and design solutions.</p>
+        </div>
+
+        <div class="expertise-grid">
+            <!-- Card 1: Software Development -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Software Development</h3>
+                <p class="exp-desc">Building robust, clean, and modular architectures using Java, Kotlin, and modern
+                    script compilations. Focusing on execution efficiency and minimal runtime overheads.</p>
+            </div>
+
+            <!-- Card 2: Apps & Games Development -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="6" width="20" height="12" rx="2" />
+                        <path d="M6 12h4m-2-2v4M16 11.5a.5.5 0 1 1 0-.01M18 12.5a.5.5 0 1 1 0-.01" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Apps &amp; Games Development</h3>
+                <p class="exp-desc">Designing optimized mobile user interfaces, background process management, and
+                    dynamic touch-responsive physics layouts.</p>
+            </div>
+
+            <!-- Card 3: System Architecture Design -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                        <polyline points="2 17 12 22 22 17" />
+                        <polyline points="2 12 12 17 22 12" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">System Architecture Design</h3>
+                <p class="exp-desc">Engineering reliable socket connection states, custom compilation pipelines,
+                    peer-to-peer data transport layers, and low-latency databases.</p>
+            </div>
+
+            <!-- Card 4: UI Graphics -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                        <path
+                            d="M12 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-8 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm12 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">UI Graphics</h3>
+                <p class="exp-desc">Optimizing hardware-accelerated layouts, high-performance animation render tracks,
+                    customized typography, and modern responsive visual components.</p>
+            </div>
+
+            <!-- Card 5: Software Testing -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="m9 11 2 2 4-4" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Software Testing</h3>
+                <p class="exp-desc">Implementing structured unit test coverage, instrumentation suites, automated
+                    integration testing, and memory leak analysis configurations.</p>
+            </div>
+
+            <!-- Card 6: Database Design -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Database Design</h3>
+                <p class="exp-desc">Configuring optimized SQLite, Room, and database indexing schemas to handle
+                    high-frequency reads and local query optimizations.</p>
+            </div>
+
+            <!-- Card 7: Performance Optimization -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 12A10 10 0 1 1 12 2" />
+                        <path d="m12 12 6.5-6.5" />
+                        <circle cx="12" cy="12" r="1.5" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Performance Optimization</h3>
+                <p class="exp-desc">Tuning CPU usage, minimizing RAM footprints, caching images efficiently, and
+                    compiling minimal build sizes to achieve lightweight footprints.</p>
+            </div>
+
+            <!-- Card 8: Automation -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Automation</h3>
+                <p class="exp-desc">Creating custom shell scripts, Gradle tasks, CI/CD pipeline definitions, and test
+                    automation configurations to speed up compilation pipelines.</p>
+            </div>
+
+            <!-- Card 9: Cyber Security -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Cyber Security</h3>
+                <p class="exp-desc">Implementing secure local directory encryption, custom hash algorithms, private
+                    browsing tunnels, and data transfer socket encryptions.</p>
+            </div>
+
+            <!-- Card 10: Cloud Architecture -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Cloud Architecture</h3>
+                <p class="exp-desc">Structuring server backends, secure API routing, P2P link endpoints, and scalable
+                    server architectures for application connectivity.</p>
+            </div>
+
+            <!-- Card 11: Distributed & Scalable Systems -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <circle cx="5" cy="5" r="3" />
+                        <circle cx="19" cy="5" r="3" />
+                        <circle cx="5" cy="19" r="3" />
+                        <circle cx="19" cy="19" r="3" />
+                        <line x1="7.5" y1="7.5" x2="10" y2="10" />
+                        <line x1="16.5" y1="7.5" x2="14" y2="10" />
+                        <line x1="7.5" y1="16.5" x2="10" y2="14" />
+                        <line x1="16.5" y1="16.5" x2="14" y2="14" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Distributed &amp; Scalable Systems</h3>
+                <p class="exp-desc">Designing peer-to-peer sync matrices, scalable socket architectures, and load
+                    balancing configurations for high-availability utilities.</p>
+            </div>
+
+            <!-- Card 12: LLM -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                        <path d="M9.5 9h5M9.5 13h5M12 9v6" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">LLM</h3>
+                <p class="exp-desc">Integrating Large Language Models locally and via secure APIs, configuring context
+                    parameters, and managing conversational model states.</p>
+            </div>
+
+            <!-- Card 13: Prompt Engineering -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        <path d="M8 10h.01M12 10h.01M16 10h.01" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">Prompt Engineering</h3>
+                <p class="exp-desc">Designing system instructions, context windows, few-shot prompt trees, and
+                    structured output formatting for natural conversational interfaces.</p>
+            </div>
+
+            <!-- Card 14: AI Product Engineering -->
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                </div>
+                <h3 class="exp-name">AI Product Engineering</h3>
+                <p class="exp-desc">Building intelligent user flows, contextual actions recommendation, local machine
+                    learning modules, and AI utility interfaces.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Madhankumar Onteddubandi ( MadhanBlastz ) · NextGen Labs. All rights reserved.
+        </p>
+
+    </footer>
+
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
+
 </html>
