@@ -1,4 +1,4 @@
-# Madhankumar Onteddubandi — Lead Architect Portfolio
+# Madhankumar Onteddubandi — Founder of NextGen Labs
 
 Professional profile and engineering portfolio of **Madhankumar Onteddubandi (@MadhanBlastz)**, Founder of **NextGen Labs**.
 
